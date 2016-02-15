@@ -1,9 +1,14 @@
-html, body
+html, body,p,h1,h2,h3,h4,h5,i
 {
 	font-family: GillSans, Calibri, Trebuchet, sans-serif;
 	overflow: visible;
+	font-size: large;
 }
-section
+code
+{
+	color: black;
+}
+.section
 {
 	overflow: hidden;
 }
@@ -11,6 +16,13 @@ div
 {
 	display: flex;
 }
+
+.ui.page.grid
+{
+	justify-content: center;
+}
+
+
 
 #title
 {
@@ -22,9 +34,9 @@ div
 	padding:0; 
 	height: 720px;
 }
-#bg1
+#bg
  {
- 	overflow: scroll;
+
 	justify-content: center;	
 	z-index: 200;
 	height: 300px;
@@ -48,10 +60,15 @@ div
 	top: 0;
 }
 
+/******** quote section ***********/
 
-
-
-
+ blockquote:before, blockquote:after {
+    position: absolute;
+    height: 60px;
+    /*width: 60px;*/
+    font-size: 120px;
+    /*line-height: 1;*/
+}
  #quote
  {
 	background-color: black; 
@@ -68,8 +85,96 @@ div
 }
 blockquote:before, blockquote:after {
     position: absolute;
-    height: 60px;
+    height: 50px;
     /*width: 60px;*/
-    font-size: 120px;
+    font-size: 100px;
     /*line-height: 1;*/
+}
+
+blockquote:before {
+    top: 0;
+    left: 0;
+    content: "\201C  ";
+}
+blockquote:after {
+    top: 0;
+    right: 0;
+    content: "\201D";
+}
+
+/******** aboutme section ***********/
+
+#aboutme
+{
+	height: 720px;
+	width: 100%;
+}
+
+#about
+{
+	padding-top: 4rem;
+	height: 140px;
+}
+.chart
+{
+float:left;
+position: relative;
+margin: 20px;
+width: 240px;
+height: 240px;
+}
+.circle-mask-outer,
+.circle-mask-inner
+{
+overflow: hidden;
+position: absolute;
+width: 120px;
+height: 240px;
+}
+.circle-mask-outer.left
+{
+left: 0;
+}
+.circle-mask-outer.right
+{
+right: 0;
+}
+.circle-mask-inner
+{
+-webkit-transform: rotate(0);
+-ms-transform: rotate(0);
+transform: rotate(0);
+}
+.circle-mask-outer.left .circle-mask-inner
+{
+left: 100%;
+-webkit-tansform-origin: 0 50%;
+-ms-transform-origin: 0 50%;
+transform-origin: 0 50%;
+}
+.circle-mask-outer.right .circle-mask-inner
+{
+right: 100%;
+-webkit-tansform-origin: 100% 50%;
+-ms-transform-origin: 100% 50%;
+transform-origin: 100% 50%;
+}
+.circle-body
+{
+border-radius: 50%;
+position: absolute;
+width: 240px;
+height: 240px; 
+}
+.circle-mask-outer.left .circle-body
+{
+right: 0;
+}
+.circle-mask-outer.right .circle-body
+{
+left: 0;
+}
+#c++ .circle-body
+{
+background-color: #0078ff;
 }
