@@ -42,7 +42,13 @@ div
 	height: 300px;
 	width: 100%;
  }
-
+ #bg1
+{
+	justify-content: center;	
+	z-index: 200;
+	height: 600px;
+	width: 100%;
+ }
 #overlay
 {
 	position: absolute;
@@ -115,6 +121,12 @@ blockquote:after {
 	padding-top: 4rem;
 	height: 140px;
 }
+.content
+{
+	line-height: 1.2;
+	font-size: -webkit-xxx-large;
+}
+/*** infographic ***/
 .chart
 {
 float:left;
@@ -165,6 +177,7 @@ border-radius: 50%;
 position: absolute;
 width: 240px;
 height: 240px; 
+background-color: #0078ff;
 }
 .circle-mask-outer.left .circle-body
 {
@@ -174,7 +187,20 @@ right: 0;
 {
 left: 0;
 }
-#c++ .circle-body
+#web .circle-body
 {
-background-color: #0078ff;
+	background-color: #ef6122;
 }
+#mobile .circle-body
+{
+	background-color: #9a22ef
+}
+
+/******** skills section ***********/
+#skills
+{
+	height: 900px;
+	width: 100%;
+}
+
+

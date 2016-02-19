@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="css/preload.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+  <style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map-canvas { height: 100% }
+</style>
 
 </head>
 
@@ -64,8 +68,17 @@
       </div>
   <section class="section" id="aboutme">
     <div class="ui page grid" id="about">
-    <h1><i class="fa fa-code fa-2x"> About。我</i></h1>
-    
+    <!-- <div style="justify-content: center; height: 56px;"><h1><i class="fa fa-code fa-2x"></i></h1>
+    </div>
+     -->
+     <h1 class="ui header">
+  <i class="fa fa-code fa-2x"></i>
+  <div class="content">
+       ABOUT ME | 我
+     
+  </div>
+</h1>
+
     </div>
     <div class="ui page stackable three column grid">
       <div class="column">
@@ -91,34 +104,96 @@
       <h5 class="ui sub header" style="text-align: center;">Department of IT: Student Government<br>Harvard Taiwan Leadership Conference<br>UDIC Lab</h5>
     </div>
     </div>
-    <div class="ui page grid" id="skills">
+    <div class="stripe" style="height: 70px;"></div>
+    
+ 
+  </section>
+  <div id="bg1" data-parallax="scroll" data-image-src="img/nchusg.jpg"></div>
+  <!-- <section class="section" id="mystory">
+   <iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DuwgFH4-So0XV6e2eBhbioc-iodQYCSrjEhkFcy0Hk0&font=Default&lang=zh-cn&start_at_end=true&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe>
+  </section> -->
+  <!-- <div id="map-canvas" style="width: 100%; height: 100%"></div>
+ -->
+ <section class="section" id="skills">
+      <div class="ui page grid">
+      <h1 class="ui header">
+  <i class="fa fa-code fa-2x"></i>
+  <div class="content">
+       Skills
+     
+  </div>
+    <span><h2>Programming</h2></span>
+    <hr>
       <div id="scene-2-content">
-        <div class="charts clearfix">
-          <div class="circle-mask-outer left">
-            <div class="circle-mask-inner">
-              <div class="circle-body"></div>
+       <div class="ui stackable three column grid">
+        <div class="column">
+          <div class="chart" id="general">
+            <div class="circle-mask-outer left">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="circle-mask-outer right">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="chart-content">
+              <img class="icon" src="" alt="GENERAL-PURPOSE">
+              <p class="text">
+                <span class="percent-number">80</span>
+                <span class="percent-symbol">%</span>
+              </p>
             </div>
           </div>
-          <div class="circle-mask-outer right">
-            <div class="circle-mask-inner">
-              <div class="circle-body"></div>
+          </div>
+          <div class="column">
+          <div class="chart" id="web">
+            <div class="circle-mask-outer left">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="circle-mask-outer right">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="chart-content">
+              <img class="icon" src="" alt="WEB">
+              <p class="text">
+                <span class="percent-number">60</span>
+                <span class="percent-symbol">%</span>
+              </p>
             </div>
           </div>
-          <div class="chart-content">
-            <img class="icon" src="" alt="c">
-            <p class="text">visual C++, C++/CLI
-              <span class="percent-number">80</span>
-              <span class="percent-symbol">%</span>
-            </p>
+          </div>
+          <div class="column">
+          <div class="chart" id="mobile">
+            <div class="circle-mask-outer left">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="circle-mask-outer right">
+              <div class="circle-mask-inner">
+                <div class="circle-body"></div>
+              </div>
+            </div>
+            <div class="chart-content">
+              <img class="icon" src="" alt="MOBILE">
+              <p class="text">
+                <span class="percent-number">60</span>
+                <span class="percent-symbol">%</span>
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <div id="bg" data-parallax="scroll" data-image-src="img/bg2.jpg">
-  <section class="section" id="mystory">
-   <iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DuwgFH4-So0XV6e2eBhbioc-iodQYCSrjEhkFcy0Hk0&font=Default&lang=zh-cn&start_at_end=true&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe>
-  </section>
+ </section>
+   <div id="bg" data-parallax="scroll" data-image-src="img/htlc2015.jpg">
 </body>
   <!-- Import JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -129,5 +204,7 @@
   <script src="js/parallax.js-1.3.1/parallax.min.js"></script>
   <!-- semantic ui-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-
-</html>
+  <script src="js/index.js"></script>
+  <script src="js/round.js"></script>
+  <!-- <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD52l9UyyCfB8q7iBGzRcup7JkadCpn0GE"></script>
+ --></html>
